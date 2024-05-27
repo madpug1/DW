@@ -402,7 +402,9 @@ function isChatGPTorGPT35Response(data) {
         
         // Check if the first significant line contains 'chatGPT' or 'GPT-3.5'
         return firstLine.toLowerCase().includes('chatgpt') ||
-               firstLine.toLowerCase().includes('gpt-3.5'); // Case-insensitive check
+               firstLine.toLowerCase().includes('gpt-3.5') ||
+               firstLine.toLowerCase().includes('GPT-3') ||
+               firstLine.toLowerCase().includes('OpenAI'); // Case-insensitive check
     }
     return false; // Return false if there's no 'response' or it doesn't meet the condition
 }
